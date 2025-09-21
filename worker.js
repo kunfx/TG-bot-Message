@@ -154,14 +154,12 @@ if (message.text) {
       break; // 匹配到一次立即停止循环
     }
   }
-
-  // 如果触发，则发送统一回复
+  // 如果触发，则发送回复
   if (triggered) {
     await sendMessage({ chat_id: chatId, text: autoReply });
   }
 }
-
-
+  
   // 转发消息给管理员
   let forwardReq = await forwardMessage({
     chat_id: ADMIN_UID,
