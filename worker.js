@@ -3,9 +3,9 @@ const TOKEN = ENV_BOT_TOKEN // 从 @BotFather 获取的 Bot Token
 const WEBHOOK = '/endpoint' // Webhook 地址路径
 const SECRET = ENV_BOT_SECRET // 用于验证 Telegram 回调的 Secret
 const ADMIN_UID = ENV_ADMIN_UID // 管理员的 Telegram UID
-const startMsgUrl = 'https://raw.githubusercontent.com/LloydAsp/nfd/main/data/startMessage.md'; // /start 欢迎消息
-const keywordsUrl = '自动回复的关键字.txt' // 每行一个关键字
-const autoReplyUrl = '自动回复给用户的内容.md' // 自动回复内容
+const startMsgUrl = 'hhttps://raw.githubusercontent.com/kunfx/TG-bot-Message/refs/heads/main/data/startMessage.md'; // /start 欢迎消息
+const keywordsUrl = 'https://raw.githubusercontent.com/kunfx/TG-bot-Message/refs/heads/main/data/keywords.txt' // 每行一个关键字
+const autoReplyUrl = 'https://raw.githubusercontent.com/kunfx/TG-bot-Message/refs/heads/main/data/autoreply.md' // 自动回复内容
 
 /**
  * 拼接 Telegram API 请求地址
