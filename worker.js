@@ -133,19 +133,34 @@ async function handleGuestMessage(message){
   }
 
   // 自动回复逻辑
-  if(message.text){
-    let text = message.text
-    let keywords = (await fetch(keywordsUrl).then(r=>r.text())).split(/\r?\n/).filter(k=>k)
-    let autoReply = await fetch(autoReplyUrl).then(r=>r.text())
+if (message.text) {
+  const text = message.text;
 
-    // 检查是否包含任意关键字
-    for(let kw of keywords){
-      if(text.includes(kw)){
-        await sendMessage({ chat_id: chatId, text: autoReply })
-        break
-      }
+  // 获取关键字列表
+  const lines = (await fetch(keywordsUrl).then(r => r.text()))
+                  .split(/\r?\n/)
+                  .map(l => l.trim())
+                  .filter(l => l !== '');
+
+  // 获取回复内容
+  const autoReply = await fetch(autoReplyUrl).then(r => r.text());
+
+  // 遍历关键字
+  let triggered = false;
+  for (const line of lines) {
+    const keywords = line.split('|').map(k => k.trim()).filter(k => k);
+    if (keywords.some(kw => text.includes(kw))) {
+      triggered = true;
+      break; // 匹配到一次立即停止循环
     }
   }
+
+  // 如果触发，则发送统一回复
+  if (triggered) {
+    await sendMessage({ chat_id: chatId, text: autoReply });
+  }
+}
+
 
   // 转发消息给管理员
   let forwardReq = await forwardMessage({
