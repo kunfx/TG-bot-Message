@@ -208,7 +208,7 @@ async function checkBlock(message){
 async function registerWebhook(event, requestUrl, suffix, secret){
   const webhookUrl = `${requestUrl.protocol}//${requestUrl.hostname}${suffix}`
   const r = await (await fetch(apiUrl('setWebhook', { url: webhookUrl, secret_token: secret }))).json()
-  return new Response('ok' in r && r.ok ? 'Ok' : JSON.stringify(r, null, 2))
+  return new Response('ok' in r && r.ok ? '运行成功' : JSON.stringify(r, null, 2))
 }
 
 /**
@@ -216,5 +216,5 @@ async function registerWebhook(event, requestUrl, suffix, secret){
  */
 async function unRegisterWebhook(event){
   const r = await (await fetch(apiUrl('setWebhook', { url: '' }))).json()
-  return new Response('ok' in r && r.ok ? 'Ok' : JSON.stringify(r, null, 2))
+  return new Response('ok' in r && r.ok ? '已停止' : JSON.stringify(r, null, 2))
 }
