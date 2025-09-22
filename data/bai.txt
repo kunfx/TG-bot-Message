@@ -3,4 +3,7 @@
 <a href="URL">超链接</a>
 <code>行内代码</code>
 <pre>多行代码块</pre>
+<blockquote>这是被引用的内容。
+它支持多行文本。
+消息将在这里显示为引用块。</blockquote>
 
