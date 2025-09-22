@@ -1,5 +1,4 @@
 <b>粗体</b>
-<blockquote>垃圾消息已删除</blockquote><br>
 <u>下划线</u>
 <a href="URL">超链接</a>
 <code>行内代码</code>
