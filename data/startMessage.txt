@@ -1,6 +1,4 @@
-请直接说详细问题，看到后会回复
-不要说：你好，在吗，用不了
+<blockquote>请直接说详细问题，看到后会回复</blockquote><br>
+<blockquote>不要说：你好，在吗，用不了</blockquote><br>
 
-<blockquote>垃圾消息已删除</blockquote><br>
-<blockquote>垃圾消息已删除</blockquote><br>
-<blockquote>垃圾消息已删除</blockquote><br>
+<blockquote>垃圾消息已删除</blockquote>
