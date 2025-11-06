@@ -2,7 +2,7 @@
 <blockquote>所有插件来源于其他网络，本频道只做简单注入和测试，不同的系统设备和软件更新都会导致插件失效</blockquote>
 
 <b>频道中的ipa文件怎么安装？</b>
-<blockquote>导入巨魔安装，或者签名工具安装，或自行问AI</blockquote>
+<blockquote>导入巨魔安装，或者<a href="https://t.me/ipaxz/137">购买</a>签名工具安装</blockquote>
 
 <b>安装完以后打开闪退？</b>
 <blockquote>说明系统不兼容，不同的设备、系统、软件版本，都可能会导致闪退，下载旧版或等待新版</blockquote>
